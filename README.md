@@ -2,13 +2,13 @@
 
 ## Установка
 
-1. Установить чистую Ubuntu 20.04 lts.
+1. Установить чистую [Ubuntu 20.04 lts](https://releases.ubuntu.com/focal/).
 2. Сделать обновление ссылок и обновление пакетов ОС с помощью команд:
   ```
   sudo apt update
   sudo apt upgrade
   ```
-2. Установить Ros Noetic.
+2. Установить [Ros Noetic](http://wiki.ros.org/noetic/Installation/Ubuntu).
 3. Установить пакеты catkin tools:
   ```
   sudo apt-get install python3-catkin-tools
@@ -25,26 +25,19 @@
   ```
 6. Скачиваем симулятор:
   ```
-  git clone https://github.com/LeekaiDel/Firmware.git
-  sudo bash ~/Firmware/Tools/setup/ubuntu.sh
+  git clone https://github.com/Yyote/Firmware.git
+  . ~/Firmware/Tools/setup/ubuntu.sh
   sudo apt install python3-packaging
   sudo apt install python3-jinja2
   sudo apt install python3-toml
   sudo apt update
   sudo apt upgrade
   ```
-7. Building: 
+7. Building:
   ```
   cd Firmware
   make clean
   DONT_RUN=1 make px4_sitl_default gazebo
-  ```
-8. Для того, чтобы работал лаунч с подвижными QR-кодами, нужно **в ваш воркспэйс** скачать пакет `object_mover_gazebo`:
-  ```bash
-  cd ~/your_ws/src
-  git clone https://github.com/Yyote/object_mover_gazebo.git
-  cd ..
-  catkin_make
   ```
 
 ## Запуск

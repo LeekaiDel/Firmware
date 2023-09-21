@@ -14,6 +14,7 @@
 INSTALL_NUTTX="true"
 INSTALL_SIM="true"
 INSTALL_ARCH=`uname -m`
+INSTALL_SITL="true"
 
 # Parse arguments
 for arg in "$@"
@@ -229,3 +230,17 @@ if [[ $INSTALL_NUTTX == "true" ]]; then
 	echo
 	echo "Relogin or reboot computer before attempting to build NuttX targets"
 fi
+
+if [[ $INSTALL_SITL == "true" ]]; then
+	echo
+	echo "Installing SITL..."
+	cd ~/Firmware/Tools
+	git clone --recursive https://github.com/Yyote/PX4-SITL_gazebo.git sitl_gazebo
+	cd ~/Firmware 
+fi
+
+cd ~/Firmware
+git tag v1.12.0
+
+
+echo "ubuntu.sh finished."
