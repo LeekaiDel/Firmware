@@ -25,7 +25,7 @@
   ```
 6. Скачиваем симулятор:
   ```
-  git clone https://github.com/Yyote/Firmware.git
+  git clone https://github.com/LeekaiDel/Firmware.git
   . ~/Firmware/Tools/setup/ubuntu.sh
   sudo apt install python3-packaging
   sudo apt install python3-jinja2
